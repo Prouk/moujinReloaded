@@ -1,0 +1,100 @@
+:root {
+    --bgColor: #41434A;
+    --containerBgColor: #2B2D31;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bgColor);
+    color: #dbdee1;
+    font-family: Tahoma, sans-serif;
+}
+
+footer {
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--containerBgColor);
+    border-radius: 20px;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+a.return {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    background-color: var(--bgColor);
+    border-radius: 10px;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.title > img {
+    margin: 20px;
+    border-radius: 20px;
+    width: 150px;
+    height: auto;
+}
+
+.centerMessage {
+    text-align: center;
+}
+
+.mainContainer {
+    margin: 20px;
+    padding: 20px;
+    background-color: var(--containerBgColor);
+    border-radius: 20px;
+}
+
+.chapter {
+    font-size: 1.75em;
+}
+
+.skillsList {
+    column-count: 2;
+}
+
+.flexBox {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.flexBox > * {
+    margin: 10px;
+}
+
+.job {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #252525;
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+}
+
+.job > * {
+    opacity: 0;
+    transition: 0.2s;
+    background-color: #252525;
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.job > * > p {
+    margin: 0;
+    padding: 15px;
+}
+
+.job:hover > * {
+    opacity: 1;
+}
