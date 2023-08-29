@@ -18,7 +18,8 @@ const (
 )
 
 type Config struct {
-	Port string `yaml:"port"`
+	Port      string `yaml:"port"`
+	BuildMode string `yaml:"buildMode"`
 }
 
 type Moujin struct {
@@ -49,6 +50,7 @@ func (m *Moujin) SetDefaultViews() error {
 }
 
 func (m *Moujin) SetDefaultRouter() {
+	gin.SetMode(m.Config.BuildMode)
 	m.Router = gin.Default()
 	m.Router.StaticFile("/favicon.ico", "./src/views/assets/reimu.png")
 	m.Router.Static("/css", "./src/views/styles")

@@ -1,1 +1,3 @@
+#buildMode: "release" | "debug"
+buildMode: "release"
 port: "8080"
